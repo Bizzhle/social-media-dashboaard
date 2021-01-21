@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {  
+--Lime-Green: hsl(163, 72%, 41%);
+--Bright-Red: hsl(356, 69%, 56%);
+
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+--Instagram: linear-gradient(90deg, rgba(253,196,104,1) 0%, rgba(230,103,139,1) 50%);
+--YouTube: hsl(348, 97%, 39%);
+--primary-color: hsl(0, 0%, 100%);
+--secondary-color: hsl(227, 47%, 96%);
+--bg-color:hsl(227, 47%, 96%); 
+--font-color-Blue: hsl(228, 12%, 44%);
+--font-color: hsl(230, 17%, 14%);
+}
+
+[data-theme="dark"] {
+    --primary-color: hsl(230, 17%, 14%);
+    --secondary-color: hsl(232, 19%, 15%);
+    --bg-color: hsl(228, 28%, 20%);
+    --font-color-Blue: hsl(228, 34%, 66%);
+    --font-color: hsl(0, 0%, 100%);
+
+}
+
+body {
+    font-family: "inter", sans-serif;
+    background-image: linear-gradient(180deg, var(--secondary-color) 10%, var(--primary-color) 10%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+    max-width: 50vw;
+    color: var(--font-color);
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 12px;
+}
+
+h2 + p {
+    margin-top: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.header h2 {
+    margin: 0;
+}
+
+
+.main {
+    display: grid;
+    grid-gap: 1rem;
+
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 180px;
+    grid-gap: 3em;
+}
+
+.fab {
+    font-size: 1.5rem;
+    margin: 4px;
+}
+.up {
+    padding: 2px;
+    color: var(--Lime-Green);
+}
+.down {
+    padding: 2px;
+    color: var(--Bright-Red);
+}
+
+.fa-facebook {
+    color: var(--Facebook);
+}
+
+.fa-twitter {
+    color: var(--Twitter);
+}
+
+
+.fa-instagram {
+    background: var(--Instagram);
+    border-radius: 5px;
+}
+
+.fa-youtube {
+    color: var(--YouTube);
+}
+.spacing {
+    letter-spacing: 2px;
+    font-size: 8px;
+}
+ .cards {
+    display: grid;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 5px;
+}
+
+.cards:hover {
+    background-color: var(--font-color-Blue);
+}
+
+.fb {
+    border-top: 3px solid var(--Facebook);
+}
+
+.tw {
+    border-top: 3px solid var(--Twitter);
+}
+.insta {
+    border-top: 3px solid;
+    border-image-source:  var(--Instagram);
+    border-image-slice : 1;
+
+    
+}
+.you {
+    border-top: 3px solid var(--YouTube);
+}
+.platform span {
+    display: block;
+    text-align: center;
+    padding: 0.2rem;
+}
+
+.bold {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+.overview .cards {
+    grid-template-columns: 3fr 1fr;
+    grid-row-gap: 50px;
+    margin: 5px;
+}
+
+.overview .fab {
+    text-align: center;
+}
+
+/* dark mode switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+  
+    em {
+      margin-left: 10px;
+      font-size: 1rem;
+    }
+  }
+  .theme-switch {
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 50px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .attribution {
+     text-align: center;
+  }
+  
+  @media (min-width: 375px) {
+    body {  
+        background-image: linear-gradient(180deg, var(--secondary-color) 20%, var(--primary-color) 20%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .overview .section {
+        grid-auto-rows: 100px;
+        grid-gap: 3em;
+    }
+  }   

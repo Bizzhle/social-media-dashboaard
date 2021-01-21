@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+
+  <title>Frontend Mentor | SM Dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style> -->
+</head>
+
+<body>
+  <header class="header">
+    <div>
+      <h2> Social Media Dashboard</h2>
+      <p> Total Followers: 23,004</p>
+    </div>
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+  </header>
+  <main class="main">
+    <section class="platform section">
+      <div class="cards fb">
+        <span class="name"><i class="fab fa-facebook"></i>@nathanf</span>
+        <span class="bold">1987</span>
+        <span class="spacing">FOLLOWERS</span>
+        <span class="up"><i class="fas fa-sort-up"></i>12 Today</span>
+      </div>
+      <div class="cards tw">
+        <span class="name"><i class="fab fa-twitter"></i>@nathanf</span>
+        <span class="bold">1044</span>
+        <span class="spacing">FOLLOWERS</span>
+        <span class="up"><i class="fas fa-sort-up"></i>99 Today</span>
+      </div>
+      <div class="cards insta">
+        <span class="name"><i class="fab fa-instagram"></i>@realnathanf</span>
+        <span class="bold">11k</span>
+        <span class="spacing">FOLLOWERS</span>
+        <span class="up"><i class="fas fa-sort-up"></i>1099 Today</span>
+      </div>
+      <div class="cards you">
+        <span class="name"><i class="fab fa-youtube"></i>Nathan F.</span>
+        <span class="bold">8239</span>
+        <span class="spacing">SUBSCRIBERS</span>
+        <span class="down"><i class="fas fa-caret-down"></i></i>144 Today</span>
+      </div>
+    </section>
+
+    <h2>Overview - Today</h2>
+    <section class="overview section">
+      <div class="cards">
+        <span> Page Views</span>
+        <span><i class="fab fa-facebook"></i></span>
+        <span class="bold">87</span>
+        <span class="up"><i class="fas fa-sort-up"></i>3%</span>
+      </div>
+      <div class="cards">
+        <span> Likes</span>
+        <span><i class="fab fa-facebook"></i></span>
+        <span class="bold">52</span>
+        <span class="down"><i class="fas fa-caret-down"></i>2%</span>
+      </div>
+      <div class="cards">
+        <span>Likes</span>
+        <span><i class="fab fa-instagram"></i></span>
+        <span class="bold">5462</span>
+        <span class="up"><i class="fas fa-sort-up"></i>2257%</span>
+      </div>
+      <div class="cards">
+        <span> Profile Views</span>
+        <span><i class="fab fa-instagram"></i></span>
+        <span class="bold">52k</span>
+        <span class="up"><i class="fas fa-sort-up"></i>1375%</span>
+      </div>
+      <div class="cards">
+        <span>Retweets</span>
+        <span><i class="fab fa-twitter"></i></span>
+        <span class="bold">117</span>
+        <span class="up"><i class="fas fa-sort-up"></i>303%</span>
+      </div>
+      <div class="cards">
+        <span>Likes</span>
+        <span><i class="fab fa-twitter"></i></span>
+        <span class="bold">507</span>
+        <span class="up"><i class="fas fa-sort-up"></i>553%</span>
+      </div>
+      <div class="cards">
+        <span>Likes</span>
+        <span><i class="fab fa-youtube"></i></span>
+        <span class="bold">107</span>
+        <span class="down"><i class="fas fa-caret-down"></i>19%</span>
+      </div>
+      <div class="cards">
+        <span> Total Views</span>
+        <span><i class="fab fa-youtube"></i></span>
+        <span class="bold">1407</span>
+        <span class="down"><i class="fas fa-caret-down"></i>12%</span>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Egbo Uchenna Paul</a>.
+    </div>
+  </footer>
+</body>
+<script>
+  const toggleSwitch = document.querySelector('#checkbox');
+
+  function switchTheme(e) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+</script>
+
+</html>
